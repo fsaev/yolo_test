@@ -11,7 +11,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/yolotest.py",
             "console": "integratedTerminal",
-            "args": ["1", "--model", "yolo26x-seg.pt", "--output", "detections"]
+            "args": ["1", "--model", "yolo26x-seg.pt", "--output", "detections", "--device", "mps"]
         }
     ]
 }

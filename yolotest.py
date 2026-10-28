@@ -15,6 +15,7 @@ def main() -> None:
 	parser.add_argument("--model", default="yolov8n.pt", help="Weights file (default: yolov8n.pt).")
 	parser.add_argument("--output", default="runs/detect/predict", help="Directory for saved results.")
 	parser.add_argument("--confidence", type=float, default=0.5, help="Minimum detection confidence.")
+	parser.add_argument("--device", default="0", help="Device to run on: 0 or cuda:0 (NVIDIA/AMD), mps (Apple Silicon), cpu (default: 0).")
 	args = parser.parse_args()
 
 	try:
@@ -34,7 +35,7 @@ def main() -> None:
 		name=output.name,
 		exist_ok=True,
 		show=True,
-		device="mps"
+		device=args.device
 	)
 
 	print("Live detection started. Press Q in the video window to stop.")
