@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+
+# Detection output
+runs/
+detections/
+
+# Model weights (downloaded automatically by Ultralytics)
+*.pt
+
+# Local test images
+keys.jpg
+photo.png
+
+.DS_Store
